@@ -1,0 +1,12 @@
+<html>
+  <head>
+    <title>Weather</title>
+  </head>
+  <body>
+      <h1>Hello</h1>
+      {% for w in weather %}
+      <p> {{ w.get_temperature(unit='celsius').temp_max  }} </p>
+	<p>{{ datetime.fromtimestamp(w.get_reference_time()).strftime('%d.%m.%Y %H:%M:%S') }}<b>({{ w.get_status()  }})</b> </p>
+      {% endfor %}
+  </body>
+</html>
