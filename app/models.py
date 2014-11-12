@@ -10,3 +10,7 @@ class Weather(db.Document):
 	city = db.DocumentField(City)
 	date = db.DateTimeField()
 	status = db.StringField()
+
+class Moscow(db.Document):
+	date = db.DateTimeField()
+	status = db.StringField()
